@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const TestimonialList = ({ testimonialList }) => {
   return (
     <>
@@ -18,10 +20,12 @@ const TestimonialList = ({ testimonialList }) => {
               return (
                 <div key={item.id} className="shadow-lg rounded-lg p-8">
                   <div className="w-[120px] h-[120px]  overflow-hidden mx-auto">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-[120px] h-[120px] rounded-3xl object-cover "
+                    <Image
+                        width={120}
+                        height={120}
+                        src={item.image}
+                        alt={item.name}
+                        className="w-[120px] h-[120px] rounded-3xl object-cover "
                     />
                   </div>
                   <div className="text-center tracking-wider  mt-8">
