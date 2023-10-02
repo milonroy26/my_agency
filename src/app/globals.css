@@ -4,4 +4,5 @@
 
 .heroBgColor {
   background: linear-gradient(to bottom, #d7f5dc 0%, #d7f5dc 100%);
+  z-index: 0;
 }

@@ -1,4 +1,4 @@
-const Hero = () => {
+const Hero = ({ heroItem, brandlist }) => {
   return (
     <>
       <section>
@@ -9,14 +9,12 @@ const Hero = () => {
                 <div className="w-full text-center lg:text-left">
                   <div className="max-w-md mx-auto lg:mx-0">
                     <h2 className="mb-3 text-4xl lg:text-5xl font-bold font-heading">
-                      <span>Build &amp; Launch without</span>
-                      <span className="text-green-600">problems</span>
+                      {heroItem.title}
                     </h2>
                   </div>
                   <div className="max-w-sm mx-auto lg:mx-0">
                     <p className="mb-6 text-gray-400 leading-loose">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Pellentesque efficitur nisl sodales egestas lobortis.
+                      {heroItem.description}
                     </p>
                     <div>
                       <a
@@ -39,25 +37,25 @@ const Hero = () => {
                 <div className="flex flex-wrap lg:mb-4 lg:ml-6">
                   <img
                     className="w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-4xl lg:rounded-br-none"
-                    src="https://images.unsplash.com/photo-1557804483-ef3ae78eca57?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=941&q=80"
-                    alt=""
+                    src={heroItem.image1}
+                    alt={heroItem.title}
                   />
                   <img
                     className="w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-4xl lg:rounded-bl-none"
-                    src="https://images.unsplash.com/photo-1559136560-16ad036d85d3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
-                    alt=""
+                    src={heroItem.image2}
+                    alt={heroItem.title}
                   />
                 </div>
                 <div className="flex flex-wrap lg:mb-4 lg:mr-6">
                   <img
                     className="w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-4xl lg:rounded-br-none"
-                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
-                    alt=""
+                    src={heroItem.image3}
+                    alt={heroItem.title}
                   />
                   <img
                     className="w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-4xl lg:rounded-bl-none"
-                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1190&q=80"
-                    alt=""
+                    src={heroItem.image4}
+                    alt={heroItem.title}
                   />
                 </div>
               </div>
@@ -70,22 +68,19 @@ const Hero = () => {
           alt=""
         />
       </section>
-      {/* patner */}
+      {/* brand list section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap mx-2">
-            <div className="mb-2 w-full md:w-1/2 lg:w-1/4 px-2 z-20">
-              <div className="bg-gray-50 md:bg-black rounded">
-                <a href="#">
-                  <img
-                    className="mx-auto h-8"
-                    src="atis-assets/logo/brands/slack.png"
-                    alt=""
-                  />
-                  sadfasfdfasdf
-                </a>
+            {brandlist.map((list) => (
+              <div className="mb-2 w-full md:w-1/2 lg:w-1/4 px-2 z-20">
+                <div className="bg-gray-50 py-4">
+                  <a href="#">
+                    <img className="mx-auto h-8" src={list.image} alt="" />
+                  </a>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
