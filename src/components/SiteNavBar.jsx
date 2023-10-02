@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -105,7 +106,7 @@ const SiteNavBar = () => {
                   ? "text-sm text-green-600 font-bold"
                   : "text-sm text-gray-400 hover:text-gray-500 "
               }
-              href={"/team"}
+              href={{ pathname: "/team" }}
             >
               Team
             </Link>
@@ -133,7 +134,7 @@ const SiteNavBar = () => {
                   ? "text-sm text-green-600 font-bold"
                   : "text-sm text-gray-400 hover:text-gray-500 "
               }
-              href={"/service"}
+              href={{ pathname: "/service" }}
             >
               Services
             </Link>
@@ -161,7 +162,7 @@ const SiteNavBar = () => {
                   ? "text-sm text-green-600 font-bold"
                   : "text-sm text-gray-400 hover:text-gray-500 "
               }
-              href={"/projects"}
+              href={{ pathname: "/projects" }}
             >
               Projects
             </Link>
@@ -189,7 +190,7 @@ const SiteNavBar = () => {
                   ? "text-sm text-green-600 font-bold"
                   : "text-sm text-gray-400 hover:text-gray-500 "
               }
-              href={"/testimonials"}
+              href={{ pathname: "/testimonials" }}
             >
               Testimonials
             </Link>
@@ -247,15 +248,7 @@ const SiteNavBar = () => {
               <li className="mb-1">
                 <Link
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded"
-                  href={"/"}
-                >
-                  Start
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded"
-                  href={"/team"}
+                  href={{ pathname: "/team" }}
                 >
                   Team
                 </Link>
@@ -263,7 +256,7 @@ const SiteNavBar = () => {
               <li className="mb-1">
                 <Link
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded"
-                  href={"/services"}
+                  href={{ pathname: "/service" }}
                 >
                   Services
                 </Link>
@@ -271,7 +264,7 @@ const SiteNavBar = () => {
               <li className="mb-1">
                 <Link
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded"
-                  href={"/projects"}
+                  href={{ pathname: "/projects" }}
                 >
                   Projects
                 </Link>
@@ -279,7 +272,7 @@ const SiteNavBar = () => {
               <li className="mb-1">
                 <Link
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded"
-                  href={"/testimonials"}
+                  href={{ pathname: "/testimonials" }}
                 >
                   Testimonials
                 </Link>

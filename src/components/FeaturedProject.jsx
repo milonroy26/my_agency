@@ -1,9 +1,9 @@
 import React from "react";
 
-const FeaturedProject = ({featuredProject}) => {
+const FeaturedProject = ({ featuredProject }) => {
   return (
     <>
-      <section className="featuredProject bg-[#F0FDF4] py-10">
+      <section className="featuredProject bg-[#F0FDF4] py-10 px-4">
         <div className="container mx-auto">
           <div className="mb-10">
             <h2 className="uppercase font-semibold text-[20px] text-primary">
@@ -14,7 +14,7 @@ const FeaturedProject = ({featuredProject}) => {
             </h1>
           </div>
           <div className="grid grid-cols-12 gap-5">
-            <div className="col-span-5">
+            <div className="col-span-12 md:col-span-5">
               <div className="card">
                 <div className="image">
                   <img
@@ -29,15 +29,15 @@ const FeaturedProject = ({featuredProject}) => {
                 </div>
               </div>
             </div>
-            <div className="col-span-7">
+
+            <div className="col-span-12 md:col-span-7">
               <div className="grid grid-cols-12 gap-4">
-                {
-                  featuredProject.map((item) => (
-                    <div className="col-span-6">
+                {featuredProject.map((item) => (
+                  <div className="md:col-span-6 col-span-12">
                     <div className="card">
                       <div className="image">
                         <img
-                          className="rounded-[20px] "
+                          className="rounded-[20px]"
                           src={item.image}
                           alt=""
                         />
@@ -47,9 +47,7 @@ const FeaturedProject = ({featuredProject}) => {
                       </div>
                     </div>
                   </div>
-                  ))
-                }
-  
+                ))}
               </div>
             </div>
           </div>

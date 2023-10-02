@@ -61,13 +61,13 @@ const page = async () => {
   const heroItem = await getHeroData();
   const brandlist = await getBrandList();
   const workList = await getWorkList();
-  const statlistCart = await getStatlist();
+  const statList = await getStatlist();
   const featuredProject = await getFeaturedProject();
   return (
     <>
       <Hero heroItem={heroItem} brandlist={brandlist}></Hero>
       <WorkList workList={workList}></WorkList>
-      <StatList statlistCart={statlistCart}></StatList>
+      <StatList statList={statList}></StatList>
       <FeaturedProject featuredProject={featuredProject}></FeaturedProject>
       <Other></Other>
     </>
