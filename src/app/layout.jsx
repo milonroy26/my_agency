@@ -2,6 +2,8 @@ import SiteNavBar from "@/components/SiteNavBar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
+import NextTopLoader from 'nextjs-toploader';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +16,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SiteNavBar></SiteNavBar>
+      <NextTopLoader
+          color="#20B15A"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={true}
+          easing="ease"
+          speed={200}
+          shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+      />
+      <SiteNavBar></SiteNavBar>
         {children}
         <Footer></Footer>
       </body>

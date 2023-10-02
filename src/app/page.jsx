@@ -38,7 +38,7 @@ async function getWorkList() {
 }
 
 //statList
-async function getStatlist() {
+async function getStatlistData() {
   const res = await fetch("https://agency.teamrabbil.com/api/StatList");
   const data = await res.json();
   if (!res.ok) {
@@ -61,13 +61,13 @@ const page = async () => {
   const heroItem = await getHeroData();
   const brandlist = await getBrandList();
   const workList = await getWorkList();
-  const statList = await getStatlist();
+  const statListData = await getStatlistData();
   const featuredProject = await getFeaturedProject();
   return (
     <>
       <Hero heroItem={heroItem} brandlist={brandlist}></Hero>
       <WorkList workList={workList}></WorkList>
-      <StatList statList={statList}></StatList>
+      <StatList statList={statListData}></StatList>
       <FeaturedProject featuredProject={featuredProject}></FeaturedProject>
       <Other></Other>
     </>

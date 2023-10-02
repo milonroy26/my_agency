@@ -19,7 +19,7 @@ const page = async () => {
 
   return (
     <>
-      <SubHero homepage="Home" currentPage="services"></SubHero>
+      <SubHero homepage="Home" currentPage="service"></SubHero>
       <AllService services={services}></AllService>
       <Other></Other>
     </>

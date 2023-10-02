@@ -30,7 +30,7 @@ const WorkList = ({ workList }) => {
   };
   return (
     <>
-      <section className="md:py-36">
+      <section className="md:py-20">
         <div className="container mx-auto px-4">
           <div className="mb-16">
             <h4 className="font-medium uppercase text-primary text-[20px]">
