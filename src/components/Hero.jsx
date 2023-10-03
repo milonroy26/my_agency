@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Hero = ({ heroItem, brandlist }) => {
   return (
     <>
@@ -35,24 +37,36 @@ const Hero = ({ heroItem, brandlist }) => {
               </div>
               <div className="w-full lg:w-1/2 px-4">
                 <div className="flex flex-wrap lg:mb-4 lg:ml-6">
-                  <img
+                  <Image
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                     className="w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-4xl lg:rounded-br-none"
                     src={heroItem.image1}
                     alt={heroItem.title}
                   />
-                  <img
+                  <Image
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                     className="w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-4xl lg:rounded-bl-none"
                     src={heroItem.image2}
                     alt={heroItem.title}
                   />
                 </div>
                 <div className="flex flex-wrap lg:mb-4 lg:mr-6">
-                  <img
+                  <Image
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                     className="w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-4xl lg:rounded-br-none"
                     src={heroItem.image3}
                     alt={heroItem.title}
                   />
-                  <img
+                  <Image
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                     className="w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-4xl lg:rounded-bl-none"
                     src={heroItem.image4}
                     alt={heroItem.title}
@@ -62,7 +76,10 @@ const Hero = ({ heroItem, brandlist }) => {
             </div>
           </div>
         </div>
-        <img
+        <Image
+            width={0}
+            height={0}
+            sizes="100vw"
           className="hidden lg:block absolute inset-0 w-full heroBgColor"
           src="lines.svg"
           alt=""
@@ -76,7 +93,9 @@ const Hero = ({ heroItem, brandlist }) => {
               <div className="mb-2 w-full md:w-1/2 lg:w-1/4 px-2 z-20">
                 <div className="bg-gray-50 py-4">
                   <a href="#">
-                    <img className="mx-auto h-8" src={list.image} alt="" />
+                    <Image width={100}
+                           height={100}
+                            className="mx-auto h-8" src={list.image} alt="" />
                   </a>
                 </div>
               </div>

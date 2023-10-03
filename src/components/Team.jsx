@@ -1,5 +1,6 @@
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 import Link from "next/link";
+import Image from "next/image";
 
 const teamListIcon = [
   {
@@ -63,7 +64,10 @@ const Team = ({ teamList }) => {
           return (
             <div key={item.id} className="shadow-lg rounded-2xl">
               <div className="overflow-hidden relative  group ">
-                <img
+                <Image
+                    width={0}
+                    height={0}
+                    sizes="100vw"
                   src={item.image}
                   alt={item.name}
                   className="object-cover w-full h-[400px] transition-all  duration-300  "

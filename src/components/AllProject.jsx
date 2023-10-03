@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const AllProject = ({ allProject }) => {
   return (
@@ -21,7 +22,10 @@ const AllProject = ({ allProject }) => {
               <div key={item.id}>
                 <div className="overflow-hidden">
                   <Link href={item.live}>
-                    <img
+                    <Image
+                        width={0}
+                        height={0}
+                        sizes="100vw"
                       src={item.image}
                       alt={item.remark}
                       className="w-full object-cover transition-all hover:scale-110 duration-300"
