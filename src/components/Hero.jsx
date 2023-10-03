@@ -90,7 +90,7 @@ const Hero = ({ heroItem, brandlist }) => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap mx-2">
             {brandlist.map((list) => (
-              <div className="mb-2 w-full md:w-1/2 lg:w-1/4 px-2 z-20">
+              <div key={list.id} className="mb-2 w-full md:w-1/2 lg:w-1/4 px-2 z-20">
                 <div className="bg-gray-50 py-4">
                   <a href="#">
                     <Image width={100}

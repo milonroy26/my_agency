@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const SiteNavBar = () => {
   const NavClick = () => {
@@ -214,12 +215,14 @@ const SiteNavBar = () => {
         <nav className="relative flex flex-col py-6 px-6 h-full w-full bg-white border-r overflow-y-auto">
           <div className="flex items-center mb-8">
             <a className="mr-auto text-3xl font-bold leading-none" href="#">
-              <img
-                className="h-10"
-                src="atis-assets/logo/atis/atis-mono-black.svg"
-                alt=""
-                width="auto"
-              />
+              {/*<Image*/}
+              {/*    width={0}*/}
+              {/*    height={10}*/}
+              {/*    sizes="100vw"*/}
+              {/*  className="h-10"*/}
+              {/*  src="atis-assets/logo/atis/atis-mono-black.svg"*/}
+              {/*  alt=""*/}
+              {/*/>*/}
             </a>
             <button
               onClick={() => {
